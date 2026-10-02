@@ -102,5 +102,5 @@ EXCEPTION
         );
 END;
 ```
-![OUTPUT](1.PNG)
+![OUTPUT](1.jpeg)
 ```
