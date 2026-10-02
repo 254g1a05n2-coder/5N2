@@ -124,7 +124,7 @@ EXCEPTION
 
 END;
 ```
-![OUTPUT](1.PNG)
-![OUTPUT](2.PNG)
-![OUTPUT](3.PNG)
+![OUTPUT](1.jpeg)
+![OUTPUT](2.jpeg)
+![OUTPUT](3.jpeg)
 ```
