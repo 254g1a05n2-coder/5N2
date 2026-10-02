@@ -1,9 +1,7 @@
-# 5 1. Create student Database with attributes Student_id, Student_name, courseand Marks and insert at least 15 row of data using insert statement.
+# create student database
 ```
 ```
 ```
-
-
 CREATE TABLE student (
     student_id NUMBER(5) PRIMARY KEY,
     student_name VARCHAR2(50),
@@ -12,9 +10,6 @@ CREATE TABLE student (
 );
 ```
 ![OUTPUT](1.jpeg)
-```
-# INSERTION
-```
 ```
 INSERT INTO student VALUES (101, 'Ravi', 'CSE', 85);
 INSERT INTO student VALUES (102, 'Sita', 'CSE', 92);
@@ -34,19 +29,11 @@ INSERT INTO student VALUES (115, 'Ajay', 'ECE', 93);
 COMMIT;
 ```
 ![OUTPUT](2.jpeg)
+```
+SELECT * FROM student;
+```
 ![OUTPUT](3.jpeg)
 ```
-# DISPLAY STUDENT TABLE
-```
-```
-SELECT * FROM STUDENT;
-```
-![OUTPUT](4.jpeg)
-```
-  # 2.PL/SQL CODE
-```
-```
-
 SET SERVEROUTPUT ON;
 DECLARE
     -- Boolean variable to check whether any student is found
@@ -89,5 +76,5 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
 END;
 ```
-![OUTPUT](5.jpeg)
+![OUTPUT](4.jpeg)
 ```
