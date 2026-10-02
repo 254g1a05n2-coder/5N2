@@ -6,7 +6,7 @@ CREATE TABLE DEPT
     DNAME VARCHAR2(30)
 );
 ```
-![output](4-1.png)
+![output](4-1.jpeg)
 (4) 2. Primary Key for DNO and NOT NULL for DNAME
 ```
 ALTER TABLE DEPT
@@ -14,7 +14,7 @@ ADD CONSTRAINT PK_DEPT PRIMARY KEY (DNO);
 ALTER TABLE DEPT
 MODIFY DNAME NOT NULL;
 ```
-![output](4-2.png)
+![output](4-2.jpeg)
 (4) 3. Create STUDENT4 table
 ```
 CREATE TABLE STUDENT4
@@ -24,7 +24,7 @@ CREATE TABLE STUDENT4
     DID NUMBER
 );
 ```
-![output](4-3.png)
+![output](4-3.jpeg)
 (4) 4. Apply constraints to STUDENT4
 ```
 ALTER TABLE STUDENT4
@@ -36,7 +36,7 @@ ADD CONSTRAINT FK_STUDENT4_DEPT
 FOREIGN KEY (DID)
 REFERENCES DEPT(DNO);
 ```
-![output](4-4.png)
+![output](4-4.jpeg)
 (4) 5. Insert departments
 ```
 INSERT INTO DEPT VALUES (10, 'CSE');
@@ -47,7 +47,7 @@ INSERT INTO DEPT VALUES (50, 'ECE');
 INSERT INTO DEPT VALUES (60, 'CSM');
 INSERT INTO DEPT VALUES (70, 'CSD');
 ```
-![output](4-5.png)
+![output](4-5.jpeg)
 (4) 6. Insert 10 students into STUDENT4
 ```
 INSERT INTO STUDENT4 VALUES (101, 'Rahul', 10);
@@ -61,7 +61,7 @@ INSERT INTO STUDENT4 VALUES (108, 'Ravi', 10);
 INSERT INTO STUDENT4 VALUES (109, 'Meena', 20);
 INSERT INTO STUDENT4 VALUES (110, 'Suresh', 30);
 ```
-![output](4-6.png)
+![output](4-6.jpeg)
 (4) 7. NATURAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNAME
@@ -69,7 +69,7 @@ FROM STUDENT4 S
 JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-7.png)
+![output](4-7.jpeg)
 (4) 8. EQUI JOIN
 ```
 SELECT S.SID, S.SNAME, D.DNO, D.DNAME
@@ -77,7 +77,7 @@ FROM STUDENT4 S
 INNER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-8.png)
+![output](4-8.jpeg)
 (4) 9. CONDITIONAL JOIN
 ```
 SELECT S.SID, S.SNAME, D.DNO, D.DNAME
@@ -85,8 +85,8 @@ FROM STUDENT4 S
 JOIN DEPT D
 ON S.DID > D.DNO;
 ```
-![output](4-9a.png)
-![output](4-9b.png)
+![output](4-9a.jpeg)
+![output](4-9b.jpeg)
 (4) 10. LEFT OUTER NATURAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNAME
@@ -94,7 +94,7 @@ FROM STUDENT4 S
 LEFT OUTER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-10.png)
+![output](4-10.jpeg)
 (4) 11. RIGHT OUTER NATURAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNAME
@@ -102,7 +102,7 @@ FROM STUDENT4 S
 RIGHT OUTER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-11.png)
+![output](4-11.jpeg)
 (4) 12. FULL OUTER NATURAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNAME
@@ -110,7 +110,7 @@ FROM STUDENT4 S
 FULL OUTER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-12.png)
+![output](4-12.jpeg)
 (4) 13. LEFT OUTER EQUI JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNO, D.DNAME
@@ -118,7 +118,7 @@ FROM STUDENT4 S
 LEFT OUTER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-13.png)
+![output](4-13.jpeg)
 (4) 14. RIGHT OUTER EQUI JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNO, D.DNAME
@@ -126,7 +126,7 @@ FROM STUDENT4 S
 RIGHT OUTER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-14.png)
+![output](4-14.jpeg)
 (4) 15. FULL OUTER EQUI JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNO, D.DNAME
@@ -134,7 +134,7 @@ FROM STUDENT4 S
 FULL OUTER JOIN DEPT D
 ON S.DID = D.DNO;
 ```
-![output](4-15.png)
+![output](4-15.jpeg)
 (4) 16. LEFT OUTER CONDITIONAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNO, D.DNAME
@@ -142,8 +142,8 @@ FROM STUDENT4 S
 LEFT OUTER JOIN DEPT D
 ON S.DID > D.DNO;
 ```
-![output](4-16a.png)
-![output](4-16b.png)
+![output](4-16a.jpeg)
+![output](4-16b.jpeg)
 (4) 17. RIGHT OUTER CONDITIONAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNO, D.DNAME
@@ -151,8 +151,8 @@ FROM STUDENT4 S
 RIGHT OUTER JOIN DEPT D
 ON S.DID > D.DNO;
 ```
-![output](4-17a.png)
-![output](4-17b.png)
+![output](4-17a.jpeg)
+![output](4-17b.jpeg)
 (4) 18. FULL OUTER CONDITIONAL JOIN
 ```
 SELECT S.SID, S.SNAME, S.DID, D.DNO, D.DNAME
@@ -160,23 +160,23 @@ FROM STUDENT4 S
 FULL OUTER JOIN DEPT D
 ON S.DID > D.DNO;
 ```
-![output](4-18a.png)
-![output](4-18b.png)
+![output](4-18a.jpeg)
+![output](4-18b.jpeg)
 (4) 19. CROSS JOIN
 ```
 SELECT S.SID, S.SNAME, D.DNO, D.DNAME
 FROM STUDENT4 S
 CROSS JOIN DEPT D;
 ```
-![output](4-19a.png)
-![output](4-19b.png)
-![output](4-19c.png)
-![output](4-19d.png)
+![output](4-19a.jpeg)
+![output](4-19b.jpeg)
+![output](4-19c.jpeg)
+![output](4-19d.jpeg)
 (4) 21. Practice JOIN operations
 ```
 SELECT S.SID, S.SNAME, D.DNAME
 FROM STUDENT4 S
 INNER JOIN DEPT D;
 ```
-![output](4-21a.png)
-![output](4-21b.png)
+![output](4-21a.jpeg)
+![output](4-21b.jpeg)
