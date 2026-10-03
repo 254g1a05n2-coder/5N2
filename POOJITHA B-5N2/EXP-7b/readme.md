@@ -16,7 +16,7 @@ INSERT INTO employee VALUES (105, 'Rahul', 45000);
 
 COMMIT;
 ```
-![output](1.png)
+![output](1.jpeg)
 ```
 CREATE OR REPLACE FUNCTION CALCULATE_ANNUAL_SALARY (
     p_monthly_salary IN NUMBER
@@ -30,7 +30,7 @@ BEGIN
 END;
 /
 ```
-![output](2.png)
+![output](2.jpeg)
 
 ```
 SELECT
@@ -41,7 +41,7 @@ SELECT
 FROM employee
 ;
 ```
-![output](3.png)
+![output](3.jpeg)
 
 
 
@@ -56,7 +56,7 @@ CREATE TABLE student (
     marks        NUMBER(5,2)
 );
 ```
-![output](4.png)
+![output](4.jpeg)
 
 ```
 INSERT INTO student VALUES (101, 'Ravi',   'CSE', 85);
@@ -77,9 +77,9 @@ INSERT INTO student VALUES (115, 'Ajay',   'ECE', 93);
 
 COMMIT;
 ```
-![output](5.png)
-![output](6.png)
-![output](7.png)
+![output](5.jpeg)
+![output](6.jpeg)
+![output](7.jpeg)
 
 
 ```
@@ -99,23 +99,23 @@ BEGIN
 END;
 /
 ```
-![output](8.png)
+![output](8.jpeg)
 
 ```
 SELECT 'CSE' AS course, COUNT_STUDENTS('CSE') AS total_students FROM dual;
 ```
-![output](9.png)
+![output](9.jpeg)
 
 ```
 SELECT 'ECE' AS course, COUNT_STUDENTS('ECE') AS total_students FROM dual;
 ```
-![output](10.png)
+![output](10.jpeg)
 
 ```
 SELECT course, COUNT_STUDENTS(course) AS total_students
 FROM (SELECT DISTINCT course FROM student);
 ```
-![output](11.png)
+![output](11.jpeg)
 
 
 
@@ -140,8 +140,8 @@ INSERT INTO student VALUES (108, 'Sneha',  58);
 
 COMMIT;
 ```
-![output](12.png)
-![output](7.png)
+![output](12.jpeg)
+![output](13.jpeg)
 
 
 ```
@@ -168,10 +168,10 @@ BEGIN
 END;
 /
 ```
-![output](13.png)
+![output](14.jpeg)
 
 ```
 SELECT student_name, marks, GET_GRADE(marks) AS grade
 FROM student;
 ```
-![output](14.png)
+![output](15.jpeg)
