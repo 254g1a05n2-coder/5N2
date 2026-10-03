@@ -19,7 +19,7 @@ INSERT INTO student VALUES (105, 'Rahul', 'CSE', 74);
 
 COMMIT;
 ```
-![output](1.png)
+![output](1.jpeg)
 
 ```
 CREATE OR REPLACE PROCEDURE GET_STUDENT_DETAILS (
@@ -44,7 +44,7 @@ EXCEPTION
 END;
 /
 ```
-![output](2.png)
+![output](2.jpeg)
 
 ```
 DECLARE
@@ -60,4 +60,4 @@ BEGIN
 END;
 /
 ```
-![output](3.png)
+![output](3.jpeg)
